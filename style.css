@@ -1,10 +1,64 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  display: grid;
-  place-items: center;
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+  margin: 25vh auto;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  aspect-ratio: 1;
+  position: absolute;
+  transition: transform 1000ms linear;
+}
+
+.card1 {
+  background-color: steelblue;
+  top: 0;
+  left: 0;
+}
+.cards:hover .card1 {
+  transform: translateX(-100%) rotateZ(0.25turn);
+}
+.card2 {
+  background-color: dimgray;
+  top: 0;
+  right: 0;
+}
+.cards:hover .card2 {
+  transform: translateX(100%) rotateZ(-0.25turn);
+}
+.card3 {
+  background-color: rosybrown;
+  bottom: 0;
+  right: 0;
+}
+.cards:hover .card3 {
+  transform: translateX(100%) rotateZ(0.25turn);
+}
+
+.card4 {
+  background-color: yellow;
+  bottom: 0;
+  left: 0;
+}
+.cards:hover .card4 {
+  transform: translateX(-100%) rotateZ(-0.25turn);
+}
+.welcome {
+  font-size: 1.3rem;
 }
